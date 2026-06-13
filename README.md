@@ -6,9 +6,9 @@ Una aplicación nativa de **Android TV** que funciona como un contenedor intelig
 
 ## 🚀 Características Clave
 
-*   **Navegación Espacial 2D Inteligente (D-Pad):** Mapeo de los botones direccionales (Arriba, Abajo, Izquierda, Derecha, OK/Enter) del control remoto para navegar de manera intuitiva por las cuadrículas y menús de la web.
-*   **Enfoque Visual Claro (Branding LaMovie):** Los elementos seleccionados muestran un borde rojo brillante con sombra y una micro-animación de zoom para que el usuario sepa en todo momento qué película o serie tiene seleccionada.
-*   **Auto-Scroll Centrado:** Al mover el foco, la pantalla se desplaza automáticamente de forma suave para mantener el elemento enfocado siempre en el centro.
+*   **Navegación por Puntero Virtual de Mouse (D-Pad):** Desplaza un puntero circular en pantalla (rojo brillante con sombra y centro blanco) usando los botones direccionales del control remoto. Es ideal para interactuar con cualquier interfaz web que no esté optimizada para navegación por teclado.
+*   **Simulación de Hover/MouseOver:** A medida que el puntero se mueve, simula eventos de mouseover/mouseenter en los elementos web inferiores, permitiendo que se desplieguen menús y animaciones CSS del sitio.
+*   **Desplazamiento (Scroll) Automático:** Cuando el puntero alcanza los márgenes del borde de la pantalla (superior, inferior, izquierdo o derecho), la página se desplaza automáticamente de manera suave en esa dirección.
 *   **Soporte de Video en Pantalla Completa:** Implementación personalizada de `WebChromeClient` que intercepta las peticiones de pantalla completa de reproductores externos (como VOE, Goodstream, etc.) y los despliega sobre un contenedor inmersivo nativo.
 *   **Control del Botón Atrás:** Mapeo del botón de retorno del mando para salir de la pantalla completa del video o retroceder en el historial de navegación web sin cerrar la app accidentalmente.
 *   **Integración con GitHub Actions:** Compilación automatizada en la nube que genera el archivo APK instalable cada vez que se sube un cambio al repositorio.
@@ -25,7 +25,7 @@ El proyecto sigue una estructura limpia estándar de Android Studio:
 ├── app/
 │   ├── src/main/
 │   │   ├── assets/
-│   │   │   └── tv_script.js    # Inyección de código JS para navegación D-Pad y scroll
+│   │   │   └── tv_script.js    # Inyección de código JS para simular puntero de mouse y scroll
 │   │   ├── java/com/lamovie/tvapp/
 │   │   │   └── MainActivity.kt # Lógica del WebView, clientes personalizados y Fullscreen
 │   │   ├── res/
